@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">Sobre</a> 
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contato</a>
+        </nav>
+    </header>
+
+    <!--home section-->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Olá, Esse sou eu</h3>
+            <h1>Pedro Santiago</h1>
+            <h3> E eu sou um <span>Desenvolvedor Mobile</span></h3>
+            <p>Não tenho todas as respostas, mas tenho algo que nunca falha: vontade de aprender e seguir em frente.</p>
+            <div class="social-media">
+                <a href="https://github.com/Pedro1santiago" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/pedro-santiago-838300277" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://wa.me/5511953575503" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://www.instagram.com/pedro_hsantiago?igsh=a3V4N3c0eW03cXEw" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+            </div>
+            <a href="#" class="btn">Download CV</a>     
+        </div>
+    
+        <div class="home-img">
+            <img src="src/Design sem nome (2).png" alt="">
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="src/5a1a7ad5-afc9-4d9e-9a7d-f96ac48ae17c.png" alt="">
+        </div>
+    
+        <div class="about-content">
+            <h2 class="heading">Sobre <span>Mim</span></h2>
+            <h3>Desenvolvedor Mobile</h3>
+            <p>Sou Pedro Santiago, desenvolvedor mobile apaixonado por tecnologia e por transformar ideias em soluções digitais. Trabalho na Solution4Fleet, empresa do grupo Santander, onde iniciei na operação e, com esforço e dedicação, conquistei meu espaço na área de TI. Atualmente, estou atuando com C# e aprendendo novas tecnologias no dia a dia...</p>
+            <a href="#" class="btn">Saiba Mais</a>
+        </div>
+    </section>
+    
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Ultimos Projetos </h2>
+
+        <div class="portfolio-container">
+            <a href="https://github.com/Pedro1santiago/Project-WhatsApp.git" target="_blank" class="portfolio-box"> 
+                <img src="/src/APP1.png" alt="Projeto WhatsApp">
+                <div class="portfolio-layer">
+                    <h4>Projeto WhatsApp</h4>
+                </div>
+            </a>
+
+            <a href="https://github.com/Pedro1santiago/Gest-o-de-gastos.git" target="_blank" class="portfolio-box"> 
+                <img src="/src/APP2.png" alt="Projeto Expenses">
+                <div class="portfolio-layer">
+                    <h4>Projeto Expenses</h4>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contate <span>Me!</span></h2>
+
+        <form action="https://formsubmit.co/pedro.santiagosiqueira@gmail.com" method="POST">
+            <div class="input-box">
+                <input type="text" name="name" placeholder="Nome completo" required> 
+                <input type="email" name="email" placeholder="Email Address" required> 
+            </div>
+            <div class="input-box">
+                <input type="text" name="phone" placeholder="Número de celular"> 
+                <input type="text" name="subject" placeholder="Assunto"> 
+            </div>
+            <textarea name="message" placeholder="Sua Mensagem" rows="6" required></textarea>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value=""> 
+            <input type="submit" value="Enviar Mensagem" class="btn"> 
+        </form>
+    </section>
+  
+    <script src="js.js"></script>
+</body>
+</html>
