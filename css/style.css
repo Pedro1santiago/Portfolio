@@ -81,10 +81,11 @@ section {
 /* === HOME === */
 .home {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  gap: 5rem;
+  flex-wrap: wrap;
 }
-
 .home-content img {
   width: 35vw;
 }
@@ -112,9 +113,17 @@ span {
   color: var(--main-color);
 }
 
+.home-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .home-img img {
-  width: 50vw;
-  max-width: 500px;
+  width: 100%;
+  max-width: 900px;
+  height: 40vw;
 }
 
 /* === SOCIAL MEDIA === */
