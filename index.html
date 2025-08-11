@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
   <header class="header">
     <a href="#" class="logo">Portfolio</a>
     <i class='bx bx-menu' id="menu-icon"></i>
@@ -20,12 +21,12 @@
     </nav>
   </header>
 
-  <!-- Home Section -->
+  <!-- Home Section final-->
   <section class="home" id="home">
     <div class="home-content">
       <h3>Olá, Esse sou eu</h3>
       <h1>Pedro Santiago</h1>
-      <h3>E eu sou um <span>Desenvolvedor Mobile</span></h3>
+      <h3>E eu sou um <span>Desenvolvedor Back-end</span></h3>
       <p>Não tenho todas as respostas, mas tenho algo que nunca falha: vontade de aprender e seguir em frente.</p>
       <div class="social-media">
         <a href="https://github.com/Pedro1santiago" target="_blank"><i class='bx bxl-github'></i></a>
@@ -33,7 +34,7 @@
         <a href="https://wa.me/5511953575503" target="_blank"><i class='bx bxl-whatsapp'></i></a>
         <a href="https://www.instagram.com/pedro_hsantiago?igsh=a3V4N3c0eW03cXEw" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
       </div>
-      <a href="Currículo.pdf" class="btn"  target="_blank" rel="noopener noreferrer">Download CV</a>     
+      <a href="CV/Currículo.pdf" class="btn"  target="_blank" rel="noopener noreferrer">Download CV</a>     
     </div>
     <div class="home-img">
       <img src="src/home-image.png" alt="">
@@ -47,13 +48,12 @@
     </div>
     <div class="about-content">
       <h2 class="heading">Sobre <span>Mim</span></h2>
-      <h3>Desenvolvedor Mobile</h3>
-      <p>Sou Pedro Santiago, desenvolvedor mobile apaixonado por tecnologia e por transformar ideias em soluções digitais. Trabalho na Solution4Fleet, empresa do grupo Santander, onde iniciei na operação e, com esforço e dedicação, conquistei meu espaço na área de TI. Atualmente, estou atuando com C# e aprendendo novas tecnologias no dia a dia. Utilizando pricipalmente o Figma para criar designs das telas dos sistemas e trabalhando com o tratamento de dados através do Power BI</p>
+      <h3>Desenvolvedor Back-end</h3>
+      <p>Sou Pedro Santiago, desenvolvedor back-end com foco em Java e apaixonado por criar soluções eficientes e escaláveis. Trabalho na Solution4Fleet, empresa do grupo Santander, onde iniciei na operação e, com esforço e dedicação, conquistei meu espaço na área de TI. Atualmente, atuo no desenvolvimento de APIs bem simples, no tratamento de dados para apresentação no Power BI, utilizando o Figma para criar protótipos de telas, entre outras tarefas. Estou sempre aprendendo novas tecnologias e buscando aprimorar minhas habilidades para entregar resultados de alto impacto.</p>
       <a href="https://www.linkedin.com/in/pedro-santiago-838300277" class="btn">Saiba Mais</a>
     </div>
   </section>
 
-  <!-- Portfolio Section -->
   <section class="portfolio" id="portfolio">
     <h2 class="heading">Últimos Projetos</h2>
 
@@ -71,59 +71,74 @@
           <h4>Projeto Expenses</h4>
         </div>
       </div>
+
+      <!-- Novo Projeto -->
+      <div class="portfolio-box" onclick="mostrarProjeto('beatTimer')">
+        <img src="src/APP3.png" alt="Projeto BeatTimer">
+        <div class="portfolio-layer">
+          <h4>BeatTimer</h4>
+        </div>
+      </div>
     </div>
 
     <div class="projeto-expandido" id="whatsapp" style="display: none;">
-        <button class="btn voltar" onclick="voltarProjetos()">Voltar</button>
-      
-        <div class="projeto-detalhes">
-          <img class="print-capa" src="src/APP1.png" alt="Capa WhatsApp">
-      
-          <div class="prints-container">
-            <div class="prints-coluna-horizontal">
-              <img class="print-lado" src="src/PrintWhtas/print1.jpg" alt="Print 1 WhatsApp">
-              <img class="print-lado" src="src/PrintWhtas/print2.jpg" alt="Print 2 WhatsApp">
-              <img class="print-lado" src="src/PrintWhtas/FireBase.png" alt="Print 3 WhatsApp">
-            </div>
-          
-            <p class="github-link">
-              Confira o projeto completo no meu 
-              <a href="https://github.com/Pedro1santiago/Project-WhatsApp.git" target="_blank">GITHUB</a>.
-            </p>
+      <button class="btn voltar" onclick="voltarProjetos()">Voltar</button>
+      <div class="projeto-detalhes">
+        <img class="print-capa" src="src/APP1.png" alt="Capa WhatsApp">
+        <div class="prints-container">
+          <div class="prints-coluna-horizontal">
+            <img class="print-lado" src="src/PrintWhtas/print1.jpg" alt="Print 1 WhatsApp">
+            <img class="print-lado" src="src/PrintWhtas/print2.jpg" alt="Print 2 WhatsApp">
+            <img class="print-lado" src="src/PrintWhtas/FireBase.png" alt="Print 3 WhatsApp">
           </div>
+          <p class="github-link">
+            Confira o projeto completo no meu 
+            <a href="https://github.com/Pedro1santiago/Project-WhatsApp.git" target="_blank">GITHUB</a>.
+          </p>
         </div>
-      
-        
       </div>
+    </div>
 
-      <div class="projeto-expandido" id="expenses" style="display: none;">
-        <button class="btn voltar" onclick="voltarProjetos()">Voltar</button>
-      
-        <div class="projeto-detalhes">
-            <img class="print-capa" src="src/APP2.png" alt="Capa Expenses">
-          
-            <div class="prints-container">
-              <div class="prints-coluna-horizontal">
-                <img class="print-lado" src="src/PrintExpenses/Print1Expenses.jpg" alt="Print 1 Expenses">
-                <img class="print-lado" src="src/PrintExpenses/Print2Expenses.jpg" alt="Print 2 Expenses">
-                <img class="print-lado" src="src/PrintExpenses/Print3Expenses.jpg" alt="Print 3 Expenses">
-              </div>
-          
-              <p class="github-link">
-                Confira o projeto completo no meu 
-                <a href="https://github.com/Pedro1santiago/Gest-o-de-gastos.git" target="_blank">GITHUB</a>.
-              </p>
-            </div>
+    <div class="projeto-expandido" id="expenses" style="display: none;">
+      <button class="btn voltar" onclick="voltarProjetos()">Voltar</button>
+      <div class="projeto-detalhes">
+        <img class="print-capa" src="src/APP2.png" alt="Capa Expenses">
+        <div class="prints-container">
+          <div class="prints-coluna-horizontal">
+            <img class="print-lado" src="src/PrintExpenses/Print1Expenses.jpg" alt="Print 1 Expenses">
+            <img class="print-lado" src="src/PrintExpenses/Print2Expenses.jpg" alt="Print 2 Expenses">
+            <img class="print-lado" src="src/PrintExpenses/Print3Expenses.jpg" alt="Print 3 Expenses">
           </div>
-      
-    
+          <p class="github-link">
+            Confira o projeto completo no meu 
+            <a href="https://github.com/Pedro1santiago/Gest-o-de-gastos.git" target="_blank">GITHUB</a>.
+          </p>
+        </div>
       </div>
+    </div>
+
+    
+    <div class="projeto-expandido" id="beatTimer" style="display: none;">
+      <button class="btn voltar" onclick="voltarProjetos()">Voltar</button>
+      <div class="projeto-detalhes">
+        <img class="print-capa-timer" src="src/APP3.png" alt="Capa BeatTimer">
+        <div class="prints-container">
+          <div class="prints-coluna-horizontal">
+            <img class="print-lado-timer" src="src/PrintBeatTimer/print1.png" alt="Print BeatTimer">
+          </div>
+          <p class="github-link">
+            Confira o projeto completo no meu 
+            <a href="https://github.com/Pedro1santiago/BeatTimer-Project" target="_blank">GITHUB</a>.
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Contact Sectio -->
+  <!-- Contact Section -->
   <section class="contact" id="contact">
     <h2 class="heading">Contate <span>Me!</span></h2>
-    <form action="https://formsubmit.co/pedro.santigosiqueira@gmail.com" method="POST">
+    <form action="https://formsubmit.co/pedro.santiagosiqueira@gmail.com" method="POST">
       <div class="input-box">
         <input type="text" name="name" placeholder="Nome completo" required> 
         <input type="email" name="email" placeholder="Email Address" required> 
@@ -134,7 +149,7 @@
       </div>
       <textarea name="message" placeholder="Sua Mensagem" rows="6" required></textarea>
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://pedro1santiago.github.io/Portfolio/"> 
+      <input type="hidden" name="_next" value=""> 
       <input type="submit" value="Enviar Mensagem" class="btn"> 
     </form>
   </section>
