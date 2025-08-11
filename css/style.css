@@ -33,7 +33,7 @@ body {
 
 section {
   min-height: 100vh;
-  padding: 10rem 9% 2rem;
+  padding: 10rem 4% 2rem;
 }
 
 /* === HEADER === */
@@ -113,6 +113,7 @@ span {
   color: var(--main-color);
 }
 
+/* === AJUSTE IMAGEM DE PERFIL - MELHORIA APLICADA === */
 .home-img {
   flex: 1;
   display: flex;
@@ -121,9 +122,15 @@ span {
 }
 
 .home-img img {
-  width: 100%;
-  max-width: 900px;
-  height: 40vw;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%; /* circular */
+  padding: 0.5rem;
+  box-sizing: border-box;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  width: 35vw; /* mantém padrão original */
 }
 
 /* === SOCIAL MEDIA === */
@@ -242,6 +249,7 @@ span {
 }
 
 /* === PORTFOLIO === */
+/* === AJUSTADO PARA RESPONSIVIDADE E TEXTO QUEBRANDO - MELHORIA APLICADA === */
 .portfolio {
   background: var(--second--color);
 }
@@ -251,38 +259,41 @@ span {
 }
 
 .portfolio-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-    justify-items: center;
-    padding: 0 1rem;
-  }
-  
-  .portfolio-box {
-    position: relative;
-    border-radius: 1.2rem;
-    box-shadow: 0 0 1rem var(--bg--color);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    background: var(--second--color);
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    max-width: 460px;
-    height: 600px;
-    /* REMOVA: margin: 0 auto; */
-  }
-  
-  .portfolio-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 1.2rem;
-    display: block;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  padding: 0 1rem;
+}
+
+/* Portfolio Box */
+.portfolio-box {
+  position: relative;
+  border-radius: 1.2rem;
+  box-shadow: 0 0 1rem var(--bg--color);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--second--color);
+  width: 100%;
+  max-width: 800px;  /* largura mais controlada */
+  height: 600px;      /* altura fixa para os cards terem mesmo tamanho */
+  cursor: pointer;
+}
+
+/* Imagem do projeto dentro do card */
+.portfolio-box img {
+  width: 100%;      /* ocupa 70% da altura do card */
+  height: 100%;
+  border-radius: 1.2rem 1.2rem 0 0;
+  display: block;
+  background: #0a0f1e; /* cor de fundo para imagens com fundo transparente */
+  object-fit: cover;
+}
 
 .portfolio-box:hover img {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 .portfolio-layer {
@@ -297,9 +308,10 @@ span {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  padding: 0 4rem;
+  padding: 0 2rem;
   transform: translateY(100%);
   transition: 0.5s ease;
+  overflow-wrap: break-word; /* permite quebra texto */
 }
 
 .portfolio-box:hover .portfolio-layer {
@@ -307,12 +319,17 @@ span {
 }
 
 .portfolio-layer h4 {
-  font-size: 3rem;
+  font-size: clamp(1.8rem, 2vw, 3rem); /* responsivo */
+  white-space: normal; /* permite quebra linha */
+  overflow-wrap: break-word;
+  margin-bottom: 0.5rem;
 }
 
 .portfolio-layer p {
-  font-size: 1.6rem;
-  margin: 0.3rem 0 1rem;
+  font-size: 1.4rem;
+  white-space: normal;
+  word-wrap: break-word;
+  margin: 0 0 1rem;
 }
 
 .portfolio-layer a {
@@ -342,9 +359,11 @@ span {
 
 .projeto-detalhes {
   display: flex;
-  gap: 40rem;
+  gap: 30rem;
   align-items: flex-start;
 }
+
+
 
 .print-capa {
   width: 300px;
@@ -354,39 +373,57 @@ span {
   object-fit: cover;
 }
 
+.print-capa-timer {
+  width: 350px;
+  height: 420px;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  object-fit: cover;
+}
+
 .prints-coluna-horizontal {
-    display: flex;
-    gap: 2rem; /* espaço confortável e responsivo */
-    flex-wrap: wrap; /* garante que não quebre em telas pequenas */
-    justify-content: flex-start;
-  }
-  .print-lado {
-    width: 260px;
-    height: 440px;
-    border-radius: 1rem;
-    box-shadow: 0 0 1rem var(--main-color);
-    object-fit: fill; /* ocupa toda a largura e altura da box */
-  }
+  display: flex;
+  gap: 2rem; /* espaçamento confortável e responsivo */
+  flex-wrap: wrap; /* evita quebra ruim em telas pequenas */
+  justify-content: flex-start;
+}
+
+.print-lado {
+  width: 260px;
+  height: 440px;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  object-fit: fill; /* ocupa toda a área */
+}
+
+.print-lado-timer {
+  width: 700px;
+  height: 430px;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  object-fit: fill; /* ocupa toda a área */
+}
 
 .github-link {
-    font-size: 3rem;
-    margin-top: 3rem;
-    color: #fff;
-    text-align: center;
-    width: 100%;
-  }
-  
-  .github-link a {
-    color: var(--main-color);
-    font-size: 2.2rem;
-    font-weight: 700;
-    text-decoration: underline;
-    transition: 0.3s;
-  }
+  font-size: 3rem;
+  margin-top: 3rem;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
+.github-link a {
+  color: var(--main-color);
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-decoration: underline;
+  transition: 0.3s;
+}
 
 .github-link a:hover {
   opacity: 0.8;
 }
+
 /* === CONTATO === */
 .contact h2 {
   margin-bottom: 3rem;
@@ -435,7 +472,7 @@ span {
   }
 }
 
-/* === RESPONSIVO === */
+/* === MEDIA QUERIES === */
 @media (max-width: 1200px) {
   html {
     font-size: 55%;
@@ -490,8 +527,8 @@ span {
     font-size: 5rem;
   }
   .home-img img {
-    width: 70vw;
-    margin-top: 4rem;
+    width: 60vw;
+    margin-top: 2rem;
   }
   .about {
     flex-direction: column-reverse;
@@ -505,6 +542,12 @@ span {
 @media (max-width: 617px) {
   .portfolio-container {
     grid-template-columns: 1fr;
+    padding: 1rem 0.5rem;
+  }
+  .portfolio-box {
+    max-width: 100%;
+    aspect-ratio: auto;
+    height: auto;
   }
 }
 
