@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio</title>
 
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
   <header class="header">
@@ -15,8 +17,9 @@
     <i class='bx bx-menu' id="menu-icon"></i>
     <nav class="navbar">
       <a href="#home" class="active">Home</a>
-      <a href="#about">Sobre</a> 
+      <a href="#about">Sobre</a>
       <a href="#portfolio">Portfolio</a>
+      <a href="#conhecimentos">Conhecimentos</a>
       <a href="#contact">Contato</a>
     </nav>
   </header>
@@ -30,11 +33,13 @@
       <p>Não tenho todas as respostas, mas tenho algo que nunca falha: vontade de aprender e seguir em frente.</p>
       <div class="social-media">
         <a href="https://github.com/Pedro1santiago" target="_blank"><i class='bx bxl-github'></i></a>
-        <a href="https://www.linkedin.com/in/pedro-santiago-838300277" target="_blank"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://www.linkedin.com/in/pedro-santiago-838300277" target="_blank"><i
+            class='bx bxl-linkedin'></i></a>
         <a href="https://wa.me/5511953575503" target="_blank"><i class='bx bxl-whatsapp'></i></a>
-        <a href="https://www.instagram.com/pedro_hsantiago?igsh=a3V4N3c0eW03cXEw" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+        <a href="https://www.instagram.com/pedro_hsantiago?igsh=a3V4N3c0eW03cXEw" target="_blank"><i
+            class='bx bxl-instagram-alt'></i></a>
       </div>
-      <a href="cv/Currículo.pdf" class="btn"  target="_blank" rel="noopener noreferrer">Download CV</a>     
+      <a href="cv/Currículo.pdf" class="btn" target="_blank" rel="noopener noreferrer">Download CV</a>
     </div>
     <div class="home-img">
       <img src="src/home-image.png" alt="">
@@ -49,7 +54,7 @@
     <div class="about-content">
       <h2 class="heading">Sobre <span>Mim</span></h2>
       <h3>Desenvolvedor Back-end</h3>
-      <p>Sou Pedro Santiago, desenvolvedor back-end com foco em Java e apaixonado por criar soluções eficientes e escaláveis. Trabalho na Solution4Fleet, empresa do grupo Santander, onde iniciei na operação e, com esforço e dedicação, conquistei meu espaço na área de TI. Atualmente, atuo no desenvolvimento de APIs bem simples, no tratamento de dados para apresentação no Power BI, utilizando o Figma para criar protótipos de telas, entre outras tarefas. Estou sempre aprendendo novas tecnologias e buscando aprimorar minhas habilidades para entregar resultados de alto impacto.</p>
+      <p>Sou Pedro Santiago, desenvolvedor back-end com foco em Java. Atuo na Solution4Fleet, empresa do grupo Santander, onde iniciei na operação e, com dedicação, conquistei meu espaço na área de TI. Atualmente, contribuo com o time de desenvolvimento na criação de funcionalidades para o sistema da empresa, incluindo o desenvolvimento de APIs para automatizar processos e integrações que otimizam a rotina de negócio. Tenho experiência prática com APIs e manipulação de dados, e sigo em constante aprimoramento técnico para entregar soluções robustas e escaláveis.</p>
       <a href="https://www.linkedin.com/in/pedro-santiago-838300277" class="btn">Saiba Mais</a>
     </div>
   </section>
@@ -87,82 +92,122 @@
       </div>
 
       <!-- Novo Projeto -->
-    
+
     </div>
 
     <div class="projeto-expandido" id="whatsapp" style="display: none;">
-      <button class="btn voltar" onclick="voltarProjetos()">Voltar</button>
-      <div class="projeto-detalhes">
-        <img class="print-capa" src="src/APP1.png" alt="Capa WhatsApp">
-        <div class="prints-container">
-          <div class="prints-coluna-horizontal">
-            <img class="print-lado" src="src/PrintWhtas/print1.jpg" alt="Print 1 WhatsApp">
-            <img class="print-lado" src="src/PrintWhtas/print2.jpg" alt="Print 2 WhatsApp">
-            <img class="print-lado" src="src/PrintWhtas/FireBase.png" alt="Print 3 WhatsApp">
-          </div>
-          <p class="github-link">
-            Confira o projeto completo no meu 
-            <a href="https://github.com/Pedro1santiago/Project-WhatsApp.git" target="_blank">GITHUB</a>.
-          </p>
-        </div>
-      </div>
+  <button class="btn voltar" onclick="voltarProjetos()">Voltar</button>
+  <div class="projeto-detalhes">
+    <img class="print-capa" src="src/APP1.png" alt="Capa WhatsApp">
+    <div class="prints-container">
+      <p class="github-link">
+        Confira o projeto completo no meu
+        <a href="https://github.com/Pedro1santiago/Project-WhatsApp.git" target="_blank">GITHUB</a>.
+      </p>
+      <p class="descricao-projeto">
+        Aplicativo de chat com sistema de login, envio de mensagens (somente texto), salvamento de contatos e personalização de perfil com foto. Todas as mensagens são salvas no banco de dados. Desenvolvido com 
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" width="20"> Kotlin, 
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" width="20"> Firebase e design feito no 
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" width="20"> Figma.
+      </p>
     </div>
+  </div>
+</div>
 
-    <div class="projeto-expandido" id="expenses" style="display: none;">
-      <button class="btn voltar" onclick="voltarProjetos()">Voltar</button>
-      <div class="projeto-detalhes">
-        <img class="print-capa" src="src/APP2.png" alt="Capa Expenses">
-        <div class="prints-container">
-          <div class="prints-coluna-horizontal">
-            <img class="print-lado" src="src/PrintExpenses/Print1Expenses.jpg" alt="Print 1 Expenses">
-            <img class="print-lado" src="src/PrintExpenses/Print2Expenses.jpg" alt="Print 2 Expenses">
-            <img class="print-lado" src="src/PrintExpenses/Print3Expenses.jpg" alt="Print 3 Expenses">
-          </div>
-          <p class="github-link">
-            Confira o projeto completo no meu 
-            <a href="https://github.com/Pedro1santiago/Gest-o-de-gastos.git" target="_blank">GITHUB</a>.
-          </p>
-        </div>
-      </div>
+<!-- Projeto Expenses -->
+<div class="projeto-expandido" id="expenses" style="display: none;">
+  <button class="btn voltar" onclick="voltarProjetos()">Voltar</button>
+  <div class="projeto-detalhes">
+    <img class="print-capa" src="src/APP2.png" alt="Capa Expenses">
+    <div class="prints-container">
+      <p class="github-link">
+        Confira o projeto completo no meu
+        <a href="https://github.com/Pedro1santiago/Gest-o-de-gastos.git" target="_blank">GITHUB</a>.
+      </p>
+      <p class="descricao-projeto">
+        Aplicativo de controle de gastos, que permite cadastrar despesas, visualizar quanto gastou em cada dia e analisar quanto do salário está sendo consumido, através de gráficos. Desenvolvido com 
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" width="20"> Flutter e design feito no 
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" width="20"> Figma.
+      </p>
     </div>
+  </div>
+</div>
 
-    
-    <div class="projeto-expandido" id="beatTimer" style="display: none;">
-      <button class="btn voltar" onclick="voltarProjetos()">Voltar</button>
-      <div class="projeto-detalhes">
-        <img class="print-capa-timer" src="src/APP3.png" alt="Capa BeatTimer">
-        <div class="prints-container">
-          <div class="prints-coluna-horizontal">
-            <img class="print-lado-timer" src="src/PrintBeatTimer/print1.png" alt="Print BeatTimer">
-          </div>
-          <p class="github-link">
-            Confira o projeto completo no meu 
-            <a href="https://github.com/Pedro1santiago/BeatTimer-Project" target="_blank">GITHUB</a>.
-          </p>
-        </div>
-      </div>
+<!-- Projeto BeatTimer -->
+<div class="projeto-expandido" id="beatTimer" style="display: none;">
+  <button class="btn voltar" onclick="voltarProjetos()">Voltar</button>
+  <div class="projeto-detalhes">
+    <img class="print-capa-timer" src="src/APP3.png" alt="Capa BeatTimer">
+    <div class="prints-container">
+      <p class="github-link">
+        Confira o projeto completo no meu
+        <a href="https://github.com/Pedro1santiago/BeatTimer-Project" target="_blank">GITHUB</a>.
+      </p>
+      <p class="descricao-projeto">
+        Aplicativo para estudo musical, permite conectar com Spotify via API, possui cronômetro, pomodoro, relógio, sistema de cores e alarmes. Desenvolvido com 
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" width="20"> Java, 
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javafx/javafx-original.svg" alt="JavaFX" width="20"> JavaFX, 
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spotify/spotify-original.svg" alt="Spotify" width="20"> Spotify, 
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring" width="20"> Spring e 
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/uno/uno-original.svg" alt="UnoSetup" width="20"> UnoSetup.
+      </p>
     </div>
+  </div>
+</div>
   </section>
+
+  <section class="conhecimentos" id="conhecimentos">
+  <h2 class="heading">Conhecimentos</h2>
+  <div class="techs">
+    <div class="tech">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+      <span class="tech-name">MySQL</span>
+    </div>
+    <div class="tech">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+      <span class="tech-name">Java</span>
+    </div>
+    <div class="tech">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin">
+      <span class="tech-name">Kotlin</span>
+    </div>
+    <div class="tech">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+      <span class="tech-name">JavaScript</span>
+    </div>
+    <div class="tech">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase">
+      <span class="tech-name">Firebase</span>
+    </div>
+    <div class="tech">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring">
+      <span class="tech-name">Spring</span>
+    </div>
+  </div>
+</section>
+
+
 
   <!-- Contact Section -->
   <section class="contact" id="contact">
     <h2 class="heading">Contate <span>Me!</span></h2>
     <form action="https://formsubmit.co/pedro.santiagosiqueira@gmail.com" method="POST">
       <div class="input-box">
-        <input type="text" name="name" placeholder="Nome completo" required> 
-        <input type="email" name="email" placeholder="Email Address" required> 
+        <input type="text" name="name" placeholder="Nome completo" required>
+        <input type="email" name="email" placeholder="Email Address" required>
       </div>
       <div class="input-box">
-        <input type="text" name="phone" placeholder="Número de celular"> 
-        <input type="text" name="subject" placeholder="Assunto"> 
+        <input type="text" name="phone" placeholder="Número de celular">
+        <input type="text" name="subject" placeholder="Assunto">
       </div>
       <textarea name="message" placeholder="Sua Mensagem" rows="6" required></textarea>
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value=""> 
-      <input type="submit" value="Enviar Mensagem" class="btn"> 
+      <input type="hidden" name="_next" value="">
+      <input type="submit" value="Enviar Mensagem" class="btn">
     </form>
   </section>
 
   <script src="js.js"></script>
 </body>
+
 </html>
