@@ -24,7 +24,7 @@
     </nav>
   </header>
 
-  <!-- Home Section final-->
+  <!-- Home Section -->
   <section class="home" id="home">
     <div class="home-content">
       <h3>Olá, Esse sou eu</h3>
@@ -54,11 +54,17 @@
     <div class="about-content">
       <h2 class="heading">Sobre <span>Mim</span></h2>
       <h3>Desenvolvedor Back-end</h3>
-      <p>Sou Pedro Santiago, desenvolvedor back-end com foco em Java. Atuo na Solution4Fleet, empresa do grupo Santander, onde iniciei na operação e, com dedicação, conquistei meu espaço na área de TI. Atualmente, contribuo com o time de desenvolvimento na criação de funcionalidades para o sistema da empresa, incluindo o desenvolvimento de APIs para automatizar processos e integrações que otimizam a rotina de negócio. Tenho experiência prática com APIs e manipulação de dados, e sigo em constante aprimoramento técnico para entregar soluções robustas e escaláveis.</p>
+      <p>Sou Pedro Santiago, desenvolvedor back-end com foco em Java. Atuo na Solution4Fleet, empresa do grupo
+        Santander, onde iniciei na operação e, com dedicação, conquistei meu espaço na área de TI. Atualmente, contribuo
+        com o time de desenvolvimento na criação de funcionalidades para o sistema da empresa, incluindo o
+        desenvolvimento de APIs para automatizar processos e integrações que otimizam a rotina de negócio. Tenho
+        experiência prática com APIs e manipulação de dados, e sigo em constante aprimoramento técnico para entregar
+        soluções robustas e escaláveis.</p>
       <a href="https://www.linkedin.com/in/pedro-santiago-838300277" class="btn">Saiba Mais</a>
     </div>
   </section>
 
+  <!-- Portfolio Section -->
   <section class="portfolio" id="portfolio">
     <h2 class="heading">Últimos Projetos</h2>
 
@@ -79,7 +85,6 @@
           <h3>Projeto WhatsApp</h3>
           <h4>Kotlin</h4>
           <h4>Firebase</h4>
-
         </div>
       </div>
 
@@ -91,102 +96,132 @@
         </div>
       </div>
 
-      <!-- Novo Projeto -->
-
     </div>
 
+    <!-- Projeto Expandido WhatsApp -->
     <div class="projeto-expandido" id="whatsapp" style="display: none;">
-  <button class="btn voltar" onclick="voltarProjetos()">Voltar</button>
-  <div class="projeto-detalhes">
-    <img class="print-capa" src="src/APP1.png" alt="Capa WhatsApp">
-    <div class="prints-container">
-      <p class="github-link">
-        Confira o projeto completo no meu
-        <a href="https://github.com/Pedro1santiago/Project-WhatsApp.git" target="_blank">GITHUB</a>.
-      </p>
-      <p class="descricao-projeto">
-        Aplicativo de chat com sistema de login, envio de mensagens (somente texto), salvamento de contatos e personalização de perfil com foto. Todas as mensagens são salvas no banco de dados. Desenvolvido com 
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" width="20"> Kotlin, 
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" width="20"> Firebase e design feito no 
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" width="20"> Figma.
-      </p>
+      <button class="btn voltar" onclick="voltarProjetos()">Voltar</button>
+      <div class="projeto-detalhes">
+        <img class="print-capa" src="src/APP1.png" alt="Capa WhatsApp">
+        <div class="prints-container">
+          <div class="prints-e-descricao">
+            <div class="prints-coluna-horizontal">
+              <img class="print-lado" src="src/PrintWhtas/print1.jpg" alt="Print 1 WhatsApp">
+              <img class="print-lado" src="src/PrintWhtas/print2.jpg" alt="Print 2 WhatsApp">
+              <img class="print-lado" src="src/PrintWhtas/FireBase.png" alt="Print 3 WhatsApp">
+            </div>
+            <div class="descricao-caixa">
+              <h3>Descrição do Projeto</h3>
+              <ul>
+                <li>Conecta com Spotify via API</li>
+                <li>Cronômetro, Pomodoro e Relógio</li>
+                <li>Sistema de cores e alarmes</li>
+                <li>Desenvolvido em Java e Spring</li>
+                <li>Interface moderna e responsiva</li>
+                <li>Funcionalidades para estudo musical</li>
+              </ul>
+            </div>
+          </div>
+          <p class="github-link">
+            Confira o projeto completo no meu
+            <a href="https://github.com/Pedro1santiago/Project-WhatsApp.git" target="_blank">GITHUB</a>.
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<!-- Projeto Expenses -->
-<div class="projeto-expandido" id="expenses" style="display: none;">
-  <button class="btn voltar" onclick="voltarProjetos()">Voltar</button>
-  <div class="projeto-detalhes">
-    <img class="print-capa" src="src/APP2.png" alt="Capa Expenses">
-    <div class="prints-container">
-      <p class="github-link">
-        Confira o projeto completo no meu
-        <a href="https://github.com/Pedro1santiago/Gest-o-de-gastos.git" target="_blank">GITHUB</a>.
-      </p>
-      <p class="descricao-projeto">
-        Aplicativo de controle de gastos, que permite cadastrar despesas, visualizar quanto gastou em cada dia e analisar quanto do salário está sendo consumido, através de gráficos. Desenvolvido com 
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" width="20"> Flutter e design feito no 
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" width="20"> Figma.
-      </p>
+    <!-- Projeto Expandido Expenses -->
+    <div class="projeto-expandido" id="expenses" style="display: none;">
+      <button class="btn voltar" onclick="voltarProjetos()">Voltar</button>
+      <div class="projeto-detalhes">
+        <img class="print-capa" src="src/APP2.png" alt="Capa Expenses">
+        <div class="prints-container">
+          <div class="prints-e-descricao">
+            <div class="prints-coluna-horizontal">
+              <img class="print-lado" src="src/PrintExpenses/Print1Expenses.jpg" alt="Print 1 Expenses">
+              <img class="print-lado" src="src/PrintExpenses/Print2Expenses.jpg" alt="Print 2 Expenses">
+              <img class="print-lado" src="src/PrintExpenses/Print3Expenses.jpg" alt="Print 3 Expenses">
+            </div>
+            <div class="descricao-caixa">
+              <h3>Descrição do Projeto</h3>
+              <ul>
+                <li>Controle de gastos pessoais</li>
+                <li>Adição e remoção de despesas</li>
+                <li>Gráficos de análise</li>
+                <li>Desenvolvido em Java</li>
+                <li>Interface simples e intuitiva</li>
+              </ul>
+            </div>
+          </div>
+          <p class="github-link">
+            Confira o projeto completo no meu
+            <a href="https://github.com/Pedro1santiago/Gest-o-de-gastos.git" target="_blank">GITHUB</a>.
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<!-- Projeto BeatTimer -->
-<div class="projeto-expandido" id="beatTimer" style="display: none;">
-  <button class="btn voltar" onclick="voltarProjetos()">Voltar</button>
-  <div class="projeto-detalhes">
-    <img class="print-capa-timer" src="src/APP3.png" alt="Capa BeatTimer">
-    <div class="prints-container">
-      <p class="github-link">
-        Confira o projeto completo no meu
-        <a href="https://github.com/Pedro1santiago/BeatTimer-Project" target="_blank">GITHUB</a>.
-      </p>
-      <p class="descricao-projeto">
-        Aplicativo para estudo musical, permite conectar com Spotify via API, possui cronômetro, pomodoro, relógio, sistema de cores e alarmes. Desenvolvido com 
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" width="20"> Java, 
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javafx/javafx-original.svg" alt="JavaFX" width="20"> JavaFX, 
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spotify/spotify-original.svg" alt="Spotify" width="20"> Spotify, 
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring" width="20"> Spring e 
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/uno/uno-original.svg" alt="UnoSetup" width="20"> UnoSetup.
-      </p>
+    <!-- Projeto Expandido BeatTimer -->
+    <div class="projeto-expandido" id="beatTimer" style="display: none;">
+      <button class="btn voltar" onclick="voltarProjetos()">Voltar</button>
+      <div class="projeto-detalhes">
+        <img class="print-capa-timer" src="src/APP3.png" alt="Capa BeatTimer">
+        <div class="prints-container">
+          <div class="prints-e-descricao">
+            <div class="prints-coluna-horizontal">
+              <img class="print-lado-timer" src="src/PrintBeatTimer/print1.png" alt="Print BeatTimer">
+            </div>
+            <div class="descricao-caixa">
+              <h3>Descrição do Projeto</h3>
+              <ul>
+                <li>Relógio e cronômetro musical</li>
+                <li>BeatTimer para prática de música</li>
+                <li>Alarmes e cores personalizáveis</li>
+                <li>Desenvolvido em Java</li>
+                <li>Interface moderna e responsiva</li>
+              </ul>
+            </div>
+          </div>
+          <p class="github-link">
+            Confira o projeto completo no meu
+            <a href="https://github.com/Pedro1santiago/BeatTimer-Project" target="_blank">GITHUB</a>.
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+
   </section>
 
+  <!-- Conhecimentos Section -->
   <section class="conhecimentos" id="conhecimentos">
-  <h2 class="heading">Conhecimentos</h2>
-  <div class="techs">
-    <div class="tech">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
-      <span class="tech-name">MySQL</span>
+    <h2 class="heading">Conhecimentos</h2>
+    <div class="techs">
+      <div class="tech">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+        <span class="tech-name">MySQL</span>
+      </div>
+      <div class="tech">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+        <span class="tech-name">Java</span>
+      </div>
+      <div class="tech">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin">
+        <span class="tech-name">Kotlin</span>
+      </div>
+      <div class="tech">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+        <span class="tech-name">JavaScript</span>
+      </div>
+      <div class="tech">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase">
+        <span class="tech-name">Firebase</span>
+      </div>
+      <div class="tech">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring">
+        <span class="tech-name">Spring</span>
+      </div>
     </div>
-    <div class="tech">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
-      <span class="tech-name">Java</span>
-    </div>
-    <div class="tech">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin">
-      <span class="tech-name">Kotlin</span>
-    </div>
-    <div class="tech">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-      <span class="tech-name">JavaScript</span>
-    </div>
-    <div class="tech">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase">
-      <span class="tech-name">Firebase</span>
-    </div>
-    <div class="tech">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring">
-      <span class="tech-name">Spring</span>
-    </div>
-  </div>
-</section>
-
-
+  </section>
 
   <!-- Contact Section -->
   <section class="contact" id="contact">
