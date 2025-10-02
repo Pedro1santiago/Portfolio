@@ -1,80 +1,106 @@
-// Seletor dos elementos do menu
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+// Todos os projetos que podem ser abertos ao clicar na capa
+const projetosExpandido = ['beatTimer', 'whatsapp', 'expenses', 'chatTech'];
 
-// Toggle do menu mobile
-menuIcon.onclick = () => {
-  menuIcon.classList.toggle('bx-x');
-  navbar.classList.toggle('active');
-};
+let indexAtual = 0; // índice do carrossel
+const capasVisiveis = 3; // quantas capas aparecem de cada vez
+let ultimaSeta = 'direita'; // seta que deve estar visível inicialmente
 
-// Seção e links do menu para scroll ativo
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
-
-window.onscroll = () => {
-  let top = window.scrollY;
-
-  sections.forEach(sec => {
-    let offset = sec.offsetTop - 150;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute('id');
-
-    if (top >= offset && top < offset + height) {
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-      });
-      const activeLink = document.querySelector(`header nav a[href*="${id}"]`);
-      if (activeLink) activeLink.classList.add('active');
-    }
-  });
-
-  // Sticky header após 100px de scroll
-  let header = document.querySelector('header');
-  header.classList.toggle('sticky', top > 100);
-
-  // Fechar menu mobile ao scroll
-  menuIcon.classList.remove('bx-x');
-  navbar.classList.remove('active');
-};
-
-// Mostrar projeto expandido pelo id
+// Função para abrir o projeto expandido ao clicar na capa
 function mostrarProjeto(id) {
-  // Esconder container geral e todos projetos expandidos
-  document.getElementById('projetos-iniciais').style.display = 'none';
-
-  // Assumindo que só tenha esses projetos expandidos, você pode adicionar mais se tiver
-  const projetosExpandidos = ['whatsapp', 'expenses', 'beatTimer']; // adicione o id BeatTimer aqui se quiser
-  projetosExpandidos.forEach(proj => {
+  projetosExpandido.forEach(proj => {
     const el = document.getElementById(proj);
     if (el) el.style.display = 'none';
   });
 
-  // Exibir só o projeto escolhido
   const projetoSelecionado = document.getElementById(id);
   if (projetoSelecionado) projetoSelecionado.style.display = 'flex';
+
+  document.getElementById('projetos-iniciais').style.display = 'none';
+
+  // esconde setas enquanto estamos no projeto expandido
+  document.getElementById("seta-esquerda").style.display = "none";
+  document.getElementById("seta-direita").style.display = "none";
 }
 
-// Voltar para lista de projetos
+// Função para voltar à grid inicial
 function voltarProjetos() {
-  const projetos = document.getElementById('projetos-iniciais');
-
-  // Oculta todos projetos expandidos
-  const projetosExpandidos = ['whatsapp', 'expenses', 'beatTimer']; // idem, adicione ids aqui
-  projetosExpandidos.forEach(proj => {
+  projetosExpandido.forEach(proj => {
     const el = document.getElementById(proj);
     if (el) el.style.display = 'none';
   });
 
-  // Força um "refresh" visual no container de projetos
-  projetos.style.display = 'none';
+  const projetos = document.getElementById('projetos-iniciais');
+  projetos.style.display = 'grid';
 
-  setTimeout(() => {
-    projetos.style.display = 'grid';
-    projetos.classList.remove('bug'); // se existir alguma classe bug
-    projetos.classList.add('portfolio-container');
-    projetos.style.gridTemplateColumns = 'repeat(auto-fit, minmax(300px, 1fr))';
-    projetos.style.gap = '1rem';
-    projetos.style.justifyItems = 'center';
-  }, 10);
+  // ajusta indexAtual caso esteja fora do limite
+  const total = projetos.children.length;
+  if (indexAtual + capasVisiveis > total) {
+    indexAtual = Math.max(total - capasVisiveis, 0);
+  }
+
+  ultimaSeta = 'direita'; // seta direita visível inicialmente
+  atualizarCarrossel();
 }
+
+// Atualiza as capas visíveis no carrossel e visibilidade das setas
+function atualizarCarrossel() {
+  const container = document.getElementById('projetos-iniciais');
+  const cards = Array.from(container.children);
+  const total = cards.length;
+
+  // mostra apenas as capas do índice atual
+  cards.forEach((card, i) => {
+    card.style.display = (i >= indexAtual && i < indexAtual + capasVisiveis) ? 'block' : 'none';
+  });
+
+  const setaEsquerda = document.getElementById("seta-esquerda");
+  const setaDireita = document.getElementById("seta-direita");
+
+  // lógica ping-pong: apenas uma seta visível por vez
+  if (indexAtual === 0) {
+    setaEsquerda.style.display = "none";
+    setaDireita.style.display = "block";
+    ultimaSeta = 'direita';
+  } else if (indexAtual >= total - capasVisiveis) {
+    setaEsquerda.style.display = "block";
+    setaDireita.style.display = "none";
+    ultimaSeta = 'esquerda';
+  } else {
+    // alterna conforme última seta usada
+    if (ultimaSeta === 'direita') {
+      setaEsquerda.style.display = "block";
+      setaDireita.style.display = "none";
+    } else {
+      setaEsquerda.style.display = "none";
+      setaDireita.style.display = "block";
+    }
+  }
+}
+
+// Avança o carrossel →
+document.getElementById("seta-direita").addEventListener("click", () => {
+  const container = document.getElementById('projetos-iniciais');
+  const total = container.children.length;
+
+  if (indexAtual < total - capasVisiveis) {
+    indexAtual++;
+    ultimaSeta = 'direita';
+    atualizarCarrossel();
+  }
+});
+
+// Volta o carrossel ←
+document.getElementById("seta-esquerda").addEventListener("click", () => {
+  if (indexAtual > 0) {
+    indexAtual--;
+    ultimaSeta = 'esquerda';
+    atualizarCarrossel();
+  }
+});
+
+// Inicializa o carrossel mostrando as capas
+document.addEventListener("DOMContentLoaded", () => {
+  indexAtual = 0; // garante que começamos da esquerda
+  ultimaSeta = 'direita';
+  atualizarCarrossel();
+});
