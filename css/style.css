@@ -766,3 +766,157 @@ span {
     height: auto;
   }
 }
+
+:root {
+  --bg: #0d0d0d;
+  --text: #fff;
+  --highlight: #3cff00;
+}
+ 
+body {
+  margin: 0;
+  font-family: "Consolas", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+  line-height: 1.6;
+}
+ 
+/* Navbar */
+header {
+  padding: 15px 8%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.logo {
+  color: var(--highlight);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo img {
+  height: 50px;
+  width: auto;
+}
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.menu a {
+  color: var(--highlight);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.menu a:hover {
+  color: var(--text);
+}
+.social {
+  display: flex;
+  gap: 10px;
+}
+.social a {
+  color: var(--highlight);
+  font-size: 1.2rem;
+  transition: transform 0.3s, color 0.3s;
+}
+.social a:hover {
+  color: var(--text);
+  transform: scale(1.2);
+}
+#theme-toggle {
+  background: none;
+  border: none;
+  color: var(--highlight);
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+ 
+/* Hero */
+.hero {
+  display: flex;
+  justify-content: space-between; /* texto à esquerda e imagem à direita */
+  align-items: center;            /* centraliza verticalmente */
+  padding: 0 10%;                 /* dá espaço nas laterais */
+  min-height: 100vh;              /* ocupa a tela toda */
+}
+ 
+.texto {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;        /* centraliza o texto no meio vertical */
+  font-size: 30px;
+}
+ 
+.texto h2 span {
+  color: var(--highlight);
+}
+ 
+.imagem {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;      /* cola a imagem na direita */
+  align-items: center;
+}
+ 
+.imagem img {
+  max-width: 90%;   /* controla o tamanho */
+  height: auto;
+}
+ 
+
+
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  width: 280px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+.card a {
+  color: var(--highlight);
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+ 
+ 
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .imagem img {
+    max-width: 250px;
+  }
+}
+ 

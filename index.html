@@ -18,7 +18,7 @@
     <nav class="navbar">
       <a href="#home" class="active">Home</a>
       <a href="#about">Sobre</a>
-      <a href="#portfolio">Portfolio</a>
+      <a href="#portfolio">Projetos</a>
       <a href="#conhecimentos">Conhecimentos</a>
       <a href="#contact">Contato</a>
     </nav>
@@ -63,6 +63,39 @@
       <a href="https://www.linkedin.com/in/pedro-santiago-838300277" class="btn">Saiba Mais</a>
     </div>
   </section>
+
+
+  <div class="projeto-expandido" id="chatTech" style="display: none;">
+    <button class="btn voltar" onclick="voltarProjetos()">Voltar</button>
+    <div class="projeto-detalhes">
+      <img class="print-capa" src="src/ChatTech.png" alt="Capa Chat Tech">
+      <div class="prints-container">
+        <div class="prints-e-descricao">
+          <div class="prints-coluna-horizontal">
+            <img class="print-lado" src="src/PrintChatTech/print1.png" alt="Print 1 Chat Tech">
+            <img class="print-lado" src="src/PrintChatTech/print2.png" alt="Print 2 Chat Tech">
+          </div>
+          <div class="descricao-caixa">
+            <h3>Descrição do Projeto</h3>
+            <ul>
+              <li>Chat em tempo real com login e mensagens privadas</li>
+              <li>Interface moderna e responsiva</li>
+              <li>Desenvolvido em Java Script</li>
+              <li>Uso de WebSockets</li>
+            </ul>
+          </div>
+        </div>
+        <p class="github-link">
+          Confira o projeto completo no meu
+          <a href="https://github.com/Pedro1santiago/RealTime_Chat" target="_blank">GITHUB</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="proximo-projeto" style="text-align:center; margin: 1rem 0; cursor:pointer;">
+    <i class='bx bx-chevron-down' style="font-size:2rem;"></i>
+  </div>
 
   <!-- Portfolio Section -->
   <section class="portfolio" id="portfolio">
@@ -192,6 +225,61 @@
 
   </section>
 
+  <section id="projetos" class="projetos">
+    <h2 class="title">Todos os projetos</h2>
+    <div class="cards">
+
+      <div class="card">
+        <h3>BeatTimer</h3>
+        <p>Aplicativo musical com cronômetro, pomodoro e alarmes, integrando Spotify via API. Desenvolvido em Java com
+          interface moderna e responsiva.</p>
+        <a href="https://github.com/Pedro1santiago/BeatTimer-Project" target="_blank">Ver projeto</a>
+      </div>
+
+      <div class="card">
+        <h3>CodeChella API</h3>
+        <p>API REST em desenvolvimento para gerenciamento de eventos e tickets. Estrutura inicial com endpoints e
+          modelos definidos.</p>
+        <a href="https://github.com/Pedro1santiago/CodeChella_API_PROJECT" target="_blank">Ver projeto</a>
+      </div>
+
+      <div class="card">
+        <h3>MedFlow API</h3>
+        <p>API para gerenciamento de dados médicos, consultas e fluxos de pacientes. Implementação em Java com Spring
+          Boot.</p>
+        <a href="https://github.com/Pedro1santiago/MedFlow_API" target="_blank">Ver projeto</a>
+      </div>
+
+      <div class="card">
+        <h3>Movie Ranking API</h3>
+        <p>API em desenvolvimento para ranking de filmes, armazenamento de avaliações e recomendações personalizadas.
+        </p>
+        <a href="https://github.com/Pedro1santiago/Movie_Ranking_API_PROJECT" target="_blank">Ver projeto</a>
+      </div>
+
+      <div class="card">
+        <h3>RealTime Chat</h3>
+        <p>Aplicativo de chat em tempo real com login, envio de mensagens e interface interativa. Desenvolvido com
+          Kotlin e Firebase.</p>
+        <a href="https://github.com/Pedro1santiago/RealTime_Chat" target="_blank">Ver projeto</a>
+      </div>
+
+      <div class="card">
+        <h3>WhatsClone</h3>
+        <p>Clone do WhatsApp com funcionalidades de login, envio de mensagens e armazenamento no Firebase. Interface
+          simples e funcional.</p>
+        <a href="https://github.com/Pedro1santiago/APP_WhatsClone" target="_blank">Ver projeto</a>
+      </div>
+
+      <div class="card">
+        <h3>Gestão de Gastos</h3>
+        <p>Aplicativo para controle de despesas, com gráficos de análise e gerenciamento de entradas e saídas.
+          Desenvolvido em Java.</p>
+        <a href="https://github.com/Pedro1santiago/APP_Gestao_de_gastos" target="_blank">Ver projeto</a>
+      </div>
+
+    </div>
+  </section>
   <!-- Conhecimentos Section -->
   <section class="conhecimentos" id="conhecimentos">
     <h2 class="heading">Conhecimentos</h2>
@@ -209,7 +297,8 @@
         <span class="tech-name">Kotlin</span>
       </div>
       <div class="tech">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+          alt="JavaScript">
         <span class="tech-name">JavaScript</span>
       </div>
       <div class="tech">
