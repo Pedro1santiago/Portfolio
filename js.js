@@ -1,3 +1,5 @@
+// ================= CARROSSEL ==================
+
 // Todos os projetos que podem ser abertos ao clicar na capa
 const projetosExpandido = ['beatTimer', 'whatsapp', 'expenses', 'chatTech'];
 
@@ -103,4 +105,42 @@ document.addEventListener("DOMContentLoaded", () => {
   indexAtual = 0; // garante que começamos da esquerda
   ultimaSeta = 'direita';
   atualizarCarrossel();
+});
+
+
+// ================= FORMULÁRIO ==================
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+  if (!form) return; // caso a página não tenha o form
+  
+  const button = form.querySelector(".btn");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // não abre nova página
+
+    button.disabled = true;
+    button.value = "Enviando...";
+
+    try {
+      await fetch("https://formsubmit.co/ajax/pedro.santigosiqueira@gmail.com", {
+        method: "POST",
+        body: new FormData(form)
+      });
+
+      button.value = "Enviado ✅";
+
+      setTimeout(() => {
+        button.disabled = false;
+        button.value = "Enviar Mensagem";
+      }, 5000);
+
+      form.reset(); // limpa os campos
+    } catch (error) {
+      button.value = "Erro ❌";
+      setTimeout(() => {
+        button.disabled = false;
+        button.value = "Enviar Mensagem";
+      }, 5000);
+    }
+  });
 });
